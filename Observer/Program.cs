@@ -5,7 +5,7 @@ namespace Observer
     // IOberser と IObservable を使用した古典的な実装
     class Program
     {
-        // see. http://garicchi.hatenablog.jp/entry/2014/09/17/200000
+        // see. http://nanoappli.com/blog/archives/6885
         static void Main(string[] args)
         {
             // 作業者（被監視者）

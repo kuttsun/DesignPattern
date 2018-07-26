@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FactoryMethod
+namespace Factory
 {
     class Program
     {
@@ -26,7 +26,7 @@ namespace FactoryMethod
         class Factory
         {
             // 引き渡された金額に相当する車の派生クラスのインスタンスを生成・返却
-            public ACar Create(int price)
+            public CarBase Create(int price)
             {
                 if (price <= 1000000)
                 {
@@ -48,17 +48,17 @@ namespace FactoryMethod
             }
         }
 
-        abstract class ACar
+        abstract class CarBase
         {
             public abstract void Drive();
         }
 
-        class CompactCar : ACar
+        class CompactCar : CarBase
         {
             public override void Drive() => Console.WriteLine("CompactCar!");
         }
 
-        class MiddleCar : ACar
+        class MiddleCar : CarBase
         {
             public override void Drive() => Console.WriteLine("MiddleCar!");
         }
